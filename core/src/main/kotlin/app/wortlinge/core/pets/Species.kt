@@ -8,13 +8,13 @@ import app.wortlinge.core.content.Word
  * Hue ranges are in degrees on the colour wheel; every pet's hue stays inside its family.
  */
 enum class Species(val hueFrom: Float, val hueTo: Float) {
-    /** der: blue family, boxy body with horns. */
+    /** der: steel-blue family, armoured four-legged drake with horns. */
     DER(198f, 226f),
-    /** die: red/pink family, tall teardrop with long ears. Wraps past 360. */
+    /** die: crimson family, two-legged wyvern with wings. Wraps past 360. */
     DIE(334f, 362f),
-    /** das: green family, wide blob with a leaf sprout. */
+    /** das: moss-green family, shell-backed beast with fronds. */
     DAS(92f, 150f),
-    /** No article: golden floating wisp. */
+    /** No article: golden ember spirit. */
     WISP(38f, 54f);
 
     companion object {

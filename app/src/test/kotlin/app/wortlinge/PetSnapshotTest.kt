@@ -31,6 +31,23 @@ import java.io.File
 class PetSnapshotTest {
     private val words = WordCatalog.parse(File("src/main/assets/words.json").readText()).words
 
+    @Test fun closeUps() {
+        val picks = listOf("hallo", "brot", "brezel", "kaffee")
+        captureRoboImage("build/outputs/roborazzi/closeups.png") {
+            Column(Modifier.background(Color(0xFFFFF8EC))) {
+                picks.forEach { id ->
+                    val w = words.first { it.id == id }
+                    val genes = PetGenes.forWord(w.id, Species.of(w))
+                    Row {
+                        listOf(Stage.BABY, Stage.ADULT).forEach { st ->
+                            Canvas(Modifier.size(280.dp, 220.dp)) { drawPet(PetLook(genes, st)) }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @Test fun allPets() {
         captureRoboImage("build/outputs/roborazzi/pets.png") {
             Column(Modifier.background(Color(0xFFFFF8EC)).padding(8.dp)) {

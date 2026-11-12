@@ -35,10 +35,13 @@ object Seeds {
     }
 }
 
-enum class EyeStyle { ROUND, SPARKLY, SLEEPY_LIDS, WIDE }
-enum class Pattern { NONE, SPOTS, STRIPES, BELLY }
-enum class Mouth { SMILE, OPEN, CAT, TOOTH }
-enum class Tuft { NONE, CURL, SPIKES, BOW }
+/** Round pupil, glowing (no pupil), heavy-lidded, or slit pupil. */
+enum class EyeStyle { ROUND, GLOWING, NARROW, SLIT }
+/** Markings on the hide, shown from the teen stage. */
+enum class Pattern { NONE, SPOTS, BANDS, SCALES }
+enum class Mouth { CLOSED, FANGS, SNARL, TUSKS }
+/** Extra head or back ornament. */
+enum class Tuft { NONE, CREST, SPINES, FRILL }
 
 /**
  * Everything that makes one pet look different from its siblings.
@@ -58,13 +61,15 @@ data class PetGenes(
     val widthFactor: Float,
     val heightFactor: Float,
     val eyeStyle: EyeStyle,
-    val eyeSpacing: Float,
+    /** Neck and snout length multiplier around 1.0. */
+    val reach: Float,
     val pattern: Pattern,
     val patternSeed: Long,
     val mouth: Mouth,
     val tuft: Tuft,
-    val blush: Boolean,
-    /** Horn length, ear length, leaf size or tail length, depending on species. */
+    /** An old battle scar across the face (adults only). */
+    val scar: Boolean,
+    /** Horn length, wing span, shell fronds or flame height, depending on species. */
     val featureSize: Float,
 ) {
     companion object {
@@ -74,19 +79,19 @@ data class PetGenes(
             return PetGenes(
                 species = species,
                 hue = hue,
-                saturation = r.range(0.55f, 0.8f),
-                lightness = r.range(0.5f, 0.66f),
-                accentHueShift = r.range(-25f, 25f),
+                saturation = r.range(0.38f, 0.62f),
+                lightness = r.range(0.38f, 0.5f),
+                accentHueShift = r.range(-18f, 18f),
                 widthFactor = r.range(0.88f, 1.12f),
                 heightFactor = r.range(0.9f, 1.1f),
                 eyeStyle = EyeStyle.entries[r.nextInt(EyeStyle.entries.size)],
-                eyeSpacing = r.range(0.85f, 1.15f),
+                reach = r.range(0.88f, 1.12f),
                 pattern = Pattern.entries[r.nextInt(Pattern.entries.size)],
                 patternSeed = r.nextLong(),
                 mouth = Mouth.entries[r.nextInt(Mouth.entries.size)],
                 tuft = Tuft.entries[r.nextInt(Tuft.entries.size)],
-                blush = r.chance(0.5f),
-                featureSize = r.range(0.8f, 1.25f),
+                scar = r.chance(0.3f),
+                featureSize = r.range(0.85f, 1.2f),
             )
         }
     }

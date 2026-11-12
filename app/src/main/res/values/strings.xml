@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wortlinge</string>
+    <string name="area_pets">%1$s · %2$d pets</string>
+    <string name="play">Play</string>
+    <string name="play_slowly">Play slowly</string>
+    <string name="slow">Slow</string>
+    <string name="example">Example</string>
+    <string name="preview">Preview</string>
+    <string name="baby">Baby</string>
+    <string name="teen">Teen</string>
+    <string name="adult">Adult</string>
+    <string name="shiny">Shiny</string>
+    <string name="asleep">Asleep</string>
+    <string name="voice_missing_title">German voice not installed</string>
+    <string name="voice_missing_body">Your phone needs the German text-to-speech voice so the pets can talk.</string>
+    <string name="voice_install">Install voice</string>
+    <string name="voice_unavailable">Text-to-speech isn\'t available on this phone. Please install \"Speech Services by Google\" from the Play Store.</string>
+    <string name="rarity_common">Common</string>
+    <string name="rarity_rare">Rare</string>
+    <string name="rarity_legendary">Legendary</string>
+    <string name="close">Close</string>
+</resources>

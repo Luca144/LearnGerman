@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "areas": [
+    { "id": "town_square", "order": 1, "nameEn": "Town Square", "nameDe": "der Marktplatz", "built": true,  "width": 24, "height": 16 },
+    { "id": "market",      "order": 2, "nameEn": "Market",      "nameDe": "der Markt",      "built": false, "width": 24, "height": 16 },
+    { "id": "station",     "order": 3, "nameEn": "Train Station","nameDe": "der Bahnhof",   "built": false, "width": 24, "height": 16 },
+    { "id": "forest",      "order": 4, "nameEn": "Forest",      "nameDe": "der Wald",       "built": false, "width": 24, "height": 16 }
+  ],
+  "words": [
+    { "id": "hallo",   "german": "Hallo",   "article": null, "english": "Hello", "kind": "phrase", "area": "town_square", "rarity": "common",
+      "exampleDe": "Hallo, wie geht's?", "exampleEn": "Hello, how are you?", "x": 12, "y": 8, "hidden": false, "accept": [] },
+    { "id": "danke",   "german": "Danke",   "article": null, "english": "Thank you", "kind": "phrase", "area": "town_square", "rarity": "common",
+      "exampleDe": "Danke für den Kaffee.", "exampleEn": "Thanks for the coffee.", "x": 18, "y": 5, "hidden": false, "accept": [] },
+    { "id": "bitte",   "german": "Bitte",   "article": null, "english": "Please / You're welcome", "kind": "phrase", "area": "town_square", "rarity": "common",
+      "exampleDe": "Ein Brot, bitte.", "exampleEn": "A loaf of bread, please.", "x": 5, "y": 5, "hidden": false, "accept": [] },
+    { "id": "tschuess", "german": "Tschüss", "article": null, "english": "Bye", "kind": "phrase", "area": "town_square", "rarity": "common",
+      "exampleDe": "Tschüss, bis morgen!", "exampleEn": "Bye, see you tomorrow!", "x": 12, "y": 15, "hidden": false, "accept": ["tschüs", "tschuss"] },
+    { "id": "brot",    "german": "Brot",    "article": "das", "english": "bread", "kind": "noun", "area": "town_square", "rarity": "common",
+      "exampleDe": "Das Brot ist frisch.", "exampleEn": "The bread is fresh.", "x": 4, "y": 3, "hidden": false, "accept": [] },
+    { "id": "broetchen", "german": "Brötchen", "article": "das", "english": "bread roll", "kind": "noun", "area": "town_square", "rarity": "rare",
+      "exampleDe": "Ich möchte zwei Brötchen.", "exampleEn": "I'd like two bread rolls.", "x": 7, "y": 4, "hidden": false, "accept": [] },
+    { "id": "brezel",  "german": "Brezel",  "article": "die", "english": "pretzel", "kind": "noun", "area": "town_square", "rarity": "common",
+      "exampleDe": "Die Brezel ist salzig.", "exampleEn": "The pretzel is salty.", "x": 2, "y": 6, "hidden": false, "accept": ["breze"] },
+    { "id": "kuchen",  "german": "Kuchen",  "article": "der", "english": "cake", "kind": "noun", "area": "town_square", "rarity": "common",
+      "exampleDe": "Der Kuchen ist lecker.", "exampleEn": "The cake is delicious.", "x": 21, "y": 3, "hidden": false, "accept": [] },
+    { "id": "kaffee",  "german": "Kaffee",  "article": "der", "english": "coffee", "kind": "noun", "area": "town_square", "rarity": "common",
+      "exampleDe": "Der Kaffee ist heiß.", "exampleEn": "The coffee is hot.", "x": 19, "y": 7, "hidden": false, "accept": ["kaffe", "café"] },
+    { "id": "milch",   "german": "Milch",   "article": "die", "english": "milk", "kind": "noun", "area": "town_square", "rarity": "common",
+      "exampleDe": "Die Milch ist kalt.", "exampleEn": "The milk is cold.", "x": 16, "y": 4, "hidden": false, "accept": [] },
+    { "id": "wasser",  "german": "Wasser",  "article": "das", "english": "water", "kind": "noun", "area": "town_square", "rarity": "rare",
+      "exampleDe": "Ein Glas Wasser, bitte.", "exampleEn": "A glass of water, please.", "x": 13, "y": 9, "hidden": false, "accept": [] },
+    { "id": "schwarzwaelder_kirschtorte", "german": "Schwarzwälder Kirschtorte", "article": "die", "english": "Black Forest gateau", "kind": "noun", "area": "town_square", "rarity": "legendary",
+      "exampleDe": "Die Schwarzwälder Kirschtorte ist sehr groß.", "exampleEn": "The Black Forest gateau is very big.", "x": 23, "y": 1, "hidden": true, "accept": ["schwarzwälder kirsch torte"] }
+  ]
+}

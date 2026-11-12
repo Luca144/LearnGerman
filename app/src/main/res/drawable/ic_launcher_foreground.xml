@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A small green "das" blob with a leaf, drawn as a vector so there are no bitmap assets. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#3E8E41"
+        android:pathData="M54,30 C56,22 64,18 70,20 C66,26 60,30 54,32 Z" />
+    <path android:fillColor="#3E8E41" android:strokeColor="#3E8E41" android:strokeWidth="2"
+        android:pathData="M54,32 L54,38" />
+    <path android:fillColor="#6CC070"
+        android:pathData="M30,70 C30,48 40,37 54,37 C68,37 78,48 78,70 C74,74 70,70 66,74 C62,78 58,72 54,76 C50,72 46,78 42,74 C38,70 34,74 30,70 Z" />
+    <path android:fillColor="#1F2D3A"
+        android:pathData="M44,56 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 M64,56 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M45.5,54.5 m-1.4,0 a1.4,1.4 0 1,0 2.8,0 a1.4,1.4 0 1,0 -2.8,0 M65.5,54.5 m-1.4,0 a1.4,1.4 0 1,0 2.8,0 a1.4,1.4 0 1,0 -2.8,0" />
+    <path android:strokeColor="#1F2D3A" android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M49,63 Q54,67 59,63" />
+</vector>

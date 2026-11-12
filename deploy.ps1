@@ -6,6 +6,18 @@
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
+# Terminals opened before the JDK was installed don't see JAVA_HOME yet: read it from the saved
+# user settings, or fall back to the newest Microsoft JDK on this PC.
+if (-not $env:JAVA_HOME) {
+    $env:JAVA_HOME = [Environment]::GetEnvironmentVariable("JAVA_HOME", "User")
+}
+if (-not $env:JAVA_HOME) {
+    $jdk = Get-ChildItem "C:\Program Files\Microsoft" -Directory -Filter "jdk-*" -ErrorAction SilentlyContinue |
+        Sort-Object Name -Descending | Select-Object -First 1
+    if ($jdk) { $env:JAVA_HOME = $jdk.FullName }
+}
+if (-not $env:JAVA_HOME) { throw "No Java found. Install it with: winget install Microsoft.OpenJDK.21" }
+
 $repo = "Luca144/LearnGerman"
 $tag = "dev"
 

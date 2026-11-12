@@ -11,7 +11,8 @@ android {
         applicationId = "app.wortlinge"
         minSdk = 26
         targetSdk = 37
-        versionCode = 1
+        // deploy.ps1 passes a rising number so each test build installs over the previous one.
+        versionCode = (project.findProperty("versionCode") as String?)?.toInt() ?: 1
         versionName = "0.1.0"
     }
 

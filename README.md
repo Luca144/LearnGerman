@@ -26,7 +26,22 @@ Needs JDK 21 (`JAVA_HOME`) and the Android SDK (`ANDROID_HOME`, or `sdk.dir` in 
 
 Pet snapshots are written to `app/build/outputs/roborazzi/pets.png`.
 
-## Installing on a phone
+## Installing on a phone without a cable (recommended)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\deploy.ps1
+```
+
+This builds the app and uploads it to the `dev` release on GitHub. On the phone, open
+<https://github.com/Luca144/LearnGerman/releases/download/dev/wortlinge.apk>, then open the downloaded
+file to install. Bookmark that link: it always points at the newest build. The build number under
+the title in the app shows which build is installed.
+
+The first time, Android asks to allow installs from your browser ("Install unknown apps"), and
+Play Protect may say it doesn't recognise the developer: choose **Install anyway**. The APK is
+public, like the rest of this repository.
+
+## Installing on a phone over USB
 
 1. On the phone: Settings → About phone → tap **Build number** seven times.
 2. Settings → System → Developer options → turn on **USB debugging**.

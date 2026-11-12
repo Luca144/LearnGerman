@@ -139,6 +139,14 @@ private fun Header(areaName: String, count: Int) {
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+        val context = LocalContext.current
+        val build = remember {
+            runCatching {
+                val info = context.packageManager.getPackageInfo(context.packageName, 0)
+                "${info.versionName} · build ${androidx.core.content.pm.PackageInfoCompat.getLongVersionCode(info)}"
+            }.getOrDefault("")
+        }
+        Text(build, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f))
     }
 }
 
